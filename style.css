@@ -1,0 +1,72 @@
+:root {
+    --header-color: aliceblue;
+    --main-bg-color: blanchedalmond;
+    --shadow-color: rgba(34, 60, 80, 0.2);
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+header {
+    position: sticky; /*навигация сверху всегда*/
+    top: 0px;
+}
+
+navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: black; /*я и тут хочу картинку сделать*/
+    margin-left: -10px; /*хз так можно вообще но вроде норм*/
+    margin-right: -10px;
+    margin-top: -10px;
+    box-shadow: 0px 0px 20px 5px var(--shadow-color);
+}
+
+/* тут поидее картинка потом будет, поменяем*/
+.logo {
+    display: flex;
+    margin-left: 30px;
+    color: var(--header-color);
+}
+
+navbar ul {
+    list-style: none;
+    margin-right: 40px;
+    padding: 0;
+    display: flex;
+}
+
+navbar li {
+    margin-left: 20px;
+}
+
+navbar a {
+    color: var(--header-color);
+    text-decoration: none;
+}
+
+main {
+    width: 80%;
+    margin-left: auto; /*отступы слева справа*/
+    margin-right: auto;
+    align-items: center;
+    background-color: var(--main-bg-color);
+    box-shadow: 0px 0px 20px 5px var(--shadow-color);
+}
+
+section {
+    padding: 50px;
+    scroll-margin-block: 5rem;
+}
+
+footer {
+    justify-content: space-evenly;
+    margin-left: -10px;
+    margin-right: -10px;
+    margin-bottom: -10px;
+    padding: 50px;
+    color: var(--header-color);
+    background-color: black;
+}
