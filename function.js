@@ -3,7 +3,7 @@ $(document).ready(function () {
 	slidesToShow: 2,
 	slidesToScroll: 1,
 	autoplay: true,
-	autoplaySpeed: 1500,
+	autoplaySpeed: 20000,
 	responsive: [{
 	breakpoint: 850,
 	settings: {
