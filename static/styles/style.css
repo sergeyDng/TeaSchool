@@ -11,6 +11,7 @@ html {
 
 body {
     background-color: var(--header-color);
+    margin: 0%;
 }
 
 navbar {
@@ -58,8 +59,7 @@ navbar a {
 
 main {
     width: 80%;
-    margin-left: auto; /*отступы слева справа*/
-    margin-right: auto;
+    margin-inline: auto;  /*отступы слева справа*/
     align-items: center;
     background-color: var(--main-bg-color);
     box-shadow: 0px 0px 20px 5px var(--shadow-color);
@@ -78,7 +78,9 @@ section {
 
 container {
     display: flex;
-    justify-content: space-between;
+    flex-direction: row; /*наконецто*/
+    flex-wrap: wrap;
+    justify-content: center;
     align-items: center;
 }
 
@@ -91,7 +93,7 @@ container {
     height: 300px;
     position: relative;
     perspective: 1000px;
-    padding: 30px;
+    margin: 30px;
     background-color: black;
     color: var(--main-bg-color);
     border: 1px solid #fff;
