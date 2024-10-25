@@ -6,6 +6,11 @@
 
 html {
     scroll-behavior: smooth;
+    background-color: black;
+}
+
+body {
+    background-color: var(--header-color);
 }
 
 header {
@@ -20,7 +25,7 @@ navbar {
     background-color: black; /*я и тут хочу картинку сделать*/
     margin-left: -10px; /*хз так можно вообще но вроде норм*/
     margin-right: -10px;
-    margin-top: -10px;
+    margin-top: 0px;
     box-shadow: 0px 0px 20px 5px var(--shadow-color);
 }
 
