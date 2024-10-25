@@ -13,12 +13,10 @@ body {
     background-color: var(--header-color);
 }
 
-header {
+navbar {
     position: sticky; /*навигация сверху всегда*/
     top: 0px;
-}
 
-navbar {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -62,8 +60,31 @@ main {
 }
 
 section {
-    padding: 50px;
+    padding: 5%;
     scroll-margin-block: 5rem;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+
+container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.courses {
+    display: block;
+}
+
+.courses card {
+    align-items: center;
+    padding: 30px;
+    background-color: black;
+    color: var(--main-bg-color);
 }
 
 footer {
