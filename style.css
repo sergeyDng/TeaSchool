@@ -34,6 +34,11 @@ navbar {
     color: var(--header-color);
 }
 
+navbar h1 {
+    margin: 0%;
+    margin-left: 1rem; 
+}
+
 navbar ul {
     list-style: none;
     margin-right: 40px;
