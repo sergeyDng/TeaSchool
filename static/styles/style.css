@@ -142,16 +142,11 @@ footer {
 }
 
 /*переворачивающиеся карточка*/
-.teachers container {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
 .card {
     width: 300px;
     height: 300px;
     position: relative;
-    margin: 30px;
+    margin: 15px;
     border: 1px solid #fff;
     border-radius: 15px;
   }
