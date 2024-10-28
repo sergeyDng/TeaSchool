@@ -164,11 +164,7 @@ footer {
     background-color: #fff;
     border-radius: 15px;
    }
-  .front img {
-    max-width: 100%;
-    min-width: 100%;
-    height: auto;
-  }
+ 
   .back {
     transform: rotateY(180deg);
   }
@@ -176,6 +172,60 @@ footer {
     transform: rotateY(180deg);}
   .card:hover .back {
     transform: rotateY(360deg);}
+
+    :root {
+      --header-color: aliceblue;
+      --main-bg-color: #ffebcd;
+      --main-bg-color-border: #cab9a0;
+      --shadow-color: rgba(34, 60, 80, 0.2);
+      --contra-color: #576f65;
+      --contra-color-border: #43574f;
+      --triada-color: #4f3532;
+      --triada-color-border: #221715;
+  }
+  
+  html {
+      scroll-behavior: smooth;
+      background-color: var(--contra-color);
+      font-family: "Fira Sans", sans-serif;
+  }
+  
+  body {
+      margin: 0;
+      background-image: url("../images/wall.jpg");
+      background-repeat: repeat-y;
+      background-size: cover;
+  }
+  
+  navbar {
+      position: sticky;
+      top: 0;
+      z-index: 10;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background-color: var(--contra-color);
+      border: 2px solid var(--contra-color-border);
+  }
+  
+  navbar a {
+      text-decoration: none;
+      padding: 20px;
+      font-size: 18px;
+  }
+  
+  navbar a:hover {
+      color: var(--header-color);
+      background-color: rgba(255, 255, 255, 0.2);
+    }
+    
+    h1 {
+        font-size: 32px;
+    }
+    
+    p {
+        font-size: 24px;
+    }
 
 /*отзывы*/
 
@@ -383,3 +433,31 @@ footer {
       .slick-next:before {
         content: "";
       }
+
+
+      .star {                      /*звездочки */
+        font-size: 10vh;
+        cursor: pointer;
+        color: rgb(255, 255, 255);
+      }
+       
+      .one {
+        color: rgb(255, 0, 0);
+      }
+       
+      .two {
+        color: rgb(255, 106, 0);
+      }
+       
+      .three {
+        color: rgb(251, 255, 120);
+      }
+       
+      .four {
+        color: rgb(255, 255, 0);
+      }
+       
+      .five {
+        color: rgb(24, 159, 14);
+      }
+
