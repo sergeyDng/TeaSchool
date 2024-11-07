@@ -161,11 +161,11 @@ section {
 }
 
 container {
-    display: flex;
-    flex-direction: row; /*наконецто*/
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, 300px);
+    grid-auto-flow: row;
+    gap: 30px;
     justify-content: center;
-    align-items: center;
 }
 
 .courses {
@@ -177,10 +177,8 @@ container {
     height: 300px;
     position: relative;
     perspective: 1000px;
-    margin: 30px;
     background-color: var(--triada-color);
     color: var(--main-bg-color);
-    border: 1px solid #fff;
     border-radius: 15px;
 }
 
@@ -199,7 +197,6 @@ footer {
     width: 300px;
     height: 300px;
     position: relative;
-    margin: 15px;
     border: 1px solid var(--contra-color-border);
     border-radius: 8px;
   }
@@ -242,7 +239,8 @@ footer {
   }
   .card:hover .back {
     transform: rotateY(360deg);
-    scale: 110%; /*м б 100%*/
+    scale: 110%; /*м б 100%
+    */
   }
 
 /*отзывы*/
@@ -486,14 +484,4 @@ header {
   background-color: lightgray;
   padding: 10px;
   text-align: center;
-}
-
-/* Стили для темной темы */
-body.dark-theme {
-  background-color: #121212; /* Темный фон */
-  color: white; /* Белый текст */
-}
-
-header.dark-theme {
-  background-color: #1e1e1e; /* Темный заголовок */
 }
