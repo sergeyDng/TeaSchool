@@ -20,17 +20,21 @@
 </head>
 
 <body>
-    <button id="theme-toggle">Переключить тему</button>
     <navbar>
         <div class="logo" href="#main">
-            <a href="/"><img src="static\images\logo_new.png" alt="LOGO" width=100px></a>
-           <a href="/"><h1>нечайная школа</h1></a>
+            <a href="#"><img src="static\images\logo_new.png" alt="LOGO" width=100px></a>
+            <a href="#"><h1>нечайная школа</h1></a>
         </div>
         <div class="logo">
-            <a href="#about">О нас</a>
-            <a href="#courses">Курсы</a>
-            <a href="#contacts">Контакты</a>
-            <a href="#teachers">Преподы</a>
+            <a>
+            <label class="theme-switch" for="checkbox">
+                <input type="checkbox" id="checkbox" /> 
+                <small>Темная тема</small>
+            </a>
+            <a href="#about" class="btn">О нас</a>
+            <a href="#courses" class="btn">Курсы</a>
+            <a href="#contacts" class="btn">Контакты</a>
+            <a href="#teachers" class="btn">Преподы</a>
         </div>
     </navbar>
     <main>
