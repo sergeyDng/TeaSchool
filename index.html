@@ -1,207 +1,77 @@
-<!DOCTYPE html>
-<html lang="ru">
+$(document).ready(function () {
+	$('.karusetulava').slick({
+	slidesToShow: 2,
+	slidesToScroll: 1,
+	autoplay: true,
+	autoplaySpeed: 10000,
+	responsive: [{
+	breakpoint: 850,
+	settings: {
+	slidesToShow: 1,
+	slidesToScroll: 1,
+	infinite: true,
+	}
+	}]
+	});
+	// Код для системы рейтинга
+    let stars = document.getElementsByClassName("star");
+    let output = document.getElementById("output");
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Чайная школа</title>
-    <!-- Подключение стилей для Slick -->
-    <link href="https://fonts.googleapis.com/css?family=Lato|Patua+One&display=swap" rel="stylesheet">
-    <link rel='stylesheet' href='https://netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.min.css'>
-    <link rel="stylesheet" href="static/styles/style.css">
+    function gfg(n) {
+        remove();
+        for (let i = 0; i < n; i++) {
+            let cls = "";
+            if (n == 1) cls = "one";
+            else if (n == 2) cls = "two";
+            else if (n == 3) cls = "three";
+            else if (n == 4) cls = "four";
+            else if (n == 5) cls = "five";
+            stars[i].className = "star " + cls;
+        }
+        output.innerText = "Rating is: " + n + "/5";
+    }
 
-    <!-- Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
-        rel="stylesheet">
-        <link rel="shortcut icon" href="изображения/иконка для вкладки.png" type="image/png">
-</head>
+    function remove() {
+        for (let i = 0; i < 5; i++) {
+            stars[i].className = "star";
+        }
+    }
 
-<body>
-    <button id="theme-toggle">Переключить тему</button>
-    <navbar>
-        <div class="logo" href="#main">
-            <a href="/"><img src="static\images\logo_new.png" alt="LOGO" width=100px></a>
-           <a href="/"><h1>нечайная школа</h1></a>
-        </div>
-        <div class="logo">
-            <a href="#about">О нас</a>
-            <a href="#courses">Курсы</a>
-            <a href="#contacts">Контакты</a>
-            <a href="#teachers">Преподы</a>
-        </div>
-    </navbar>
-    <main>
+    // Пример добавления обработчиков событий для звезд
+    for (let i = 0; i < stars.length; i++) {
+        stars[i].addEventListener('click', function() {
+            gfg(i + 1); // Передаем рейтинг от 1 до 5
+        });
+    }
+});
 
-        <section id="about" class="header">
-            <div>
-                <h1>А существует ли методы заваривания чая?</h1>
-                <p></p>
-                Преимущества наверное
-            </div>
-            <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem dolor hic veritatis similique? Itaque
-                asperiores error recusandae ex nulla cupiditate accusamus debitis quia? Eligendi, eveniet. Quae enim
-                quidem voluptas. Alias.
-            </p>
-        </section>
+// переключение темы
+const tema = document.getElementById('theme-toggle');
 
-        <section id="courses" class="courses">
-            <h1>Курсы</h1>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti maxime quaerat nobis eos adipisci minus
-                sint ipsam enim quasi. Illum, dignissimos velit asperiores cupiditate reprehenderit odio temporibus
-                aspernatur blanditiis mollitia.</p>
-            <container>
-                <card>
-                    <h2>Курс 1</h2>
-                </card>
-                <card>
-                    <h2>Курс 2</h2>
-                </card>
-                <card>
-                    <h2>Курс 3</h2>
-                </card>
-                <card>
-                    <h2>Курс 4</h2>
-                </card>
-            </container>
-        </section>
+// Проверяем, есть ли сохраненная тема в localStorage
+if (localStorage.getItem('theme') === 'dark') {
+    document.body.classList.add('dark-theme');
+    document.querySelector('header').classList.add('dark-theme');
+}
 
-        <section>
-            <h1> Преподы. Их плюсы. </h1>
-            <container>
-                <div class="card">
-                    <div class="front"><img src="изображения/препод8.png" alt="Преподаватель чайной школы"></div>
-                    <div class="back"><span><b><h3><center>Романов Владислав</center></h3></b><em> <b>- Умение делать чай - это суперсила:</b> Владислав знает, как сделать так, чтобы даже черный чай заиграл новыми красками!</em>
-                    </span></div>
-                </div>
-                <div class="card">
-                    <div class="front"><img src="изображения/препод6.png" alt="Преподаватель чайной школы"></div>
-                    <div class="back"><span><b><h3><center>Дадарио Александра</center></h3></b><em><b>Тайна заваривания:</b> Александра, расскажет, как заваривать чай так, чтобы он стал произведением искусства. Кто знал, что для этого нужно больше навыков, чем для приготовления ужина?
-                    </em></span></div>
-                </div>
-                <div class="card">
-                    <div class="front"><img src="изображения/препод7.png" alt="Преподаватель чайной школы"></div>
-                    <div class="back"><span><b><h3><center>Соколова Екатерина</center></h3></b><em><b>Чай как искусство:</b> Екатерина объяснит, почему некоторые сорта чая стоят целое состояние. И ты вдруг поймешь, что за 1000 рублей можно не только съездить на такси, но и «попробовать» кусочек счастья в чашке.
-                    </em></span></div>
-                </div>
-            </container>
-        </section>
+// Обработчик события для кнопки переключения темы
+const themeToggleButton = document.getElementById('theme-toggle');
 
-        <section>
-            <h1>Отзывы. Средняя оценка. Награды.</h1>
+// Проверяем, есть ли сохраненная тема в localStorage
+if (localStorage.getItem('theme') === 'dark') {
+    document.body.classList.add('dark-theme');
+    document.querySelector('header').classList.add('dark-theme');
+}
 
-            <div class="vospominan">
-                <div class="karusetulava">
-                    <div>
-                        <figure class="testimonial">
-                            <blockquote>Instagram имеет более 1 миллиарда активных пользователей в месяц и является
-                                одной из крупнейших социальных сетей. Интерактивный и привлекательный характер
-                                приложения делает его еще более интересным для пользователей. Возможно, это причина
-                                того, что более 500 миллионов человек ежедневно смотрят «Истории».
-                                <div class="btn"></div>
-                            </blockquote>
-                            <img src="https://zornet.ru/_fr/83/3246094.jpg" alt="ZorNet.Ru — сайт для вебмастера" />
-                            <div class="peopl">
-                                <h3>Нил Патель</h3>
-                                <p class="indentity">SEO Эксперт</p>
-                            </div>
-                        </figure>
-                    </div>
+// Обработчик события для кнопки переключения темы
+themeToggleButton.addEventListener('click', () => {
+    document.body.classList.toggle('dark-theme');
+    document.querySelector('header').classList.toggle('dark-theme');
 
-                    <div>
-                        <figure class="testimonial">
-                            <blockquote>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-                                incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
-                                exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure
-                                dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-                                <div class="btn"></div>
-                            </blockquote>
-                            <img src="https://zornet.ru/_fr/83/1334968.jpg" alt="Ключевое слово" />
-                            <div class="peopl">
-                                <h3>Shaan</h3>
-                                <p class="indentity">Веб-разработчик</p>
-                            </div>
-                        </figure>
-                    </div>
-
-                    <div>
-                        <figure class="testimonial">
-                            <blockquote>Также необходимо проверить их тон, чтобы увидеть, соответствует ли он тону
-                                вашего бренда. Вы также должны проверить их уровень вовлеченности, охват, число
-                                подписчиков и их аудиторию. Если их аудитория не соответствует вашей целевой аудитории,
-                                нет смысла в партнерстве с ними.
-                                <div class="btn"></div>
-                            </blockquote>
-                            <img src="https://zornet.ru/_fr/83/4982205.jpg" alt="" />
-                            <div class="peopl">
-                                <h3>Brian Dean</h3>
-                                <p class="indentity">SEO блогер</p>
-                            </div>
-                        </figure>
-                    </div>
-
-                    <div>
-                        <figure class="testimonial">
-                            <blockquote>Как правило, нано-влияющие имеют ограниченный охват, но высокий уровень
-                                вовлеченности и очень доступны для брендов. С другой стороны, знаменитости имеют
-                                огромный охват, но их уровень вовлеченности довольно низок. Вы также должны иметь
-                                гораздо больший бюджет, чтобы сотрудничать с ними.
-                                <div class="btn"></div>
-                            </blockquote>
-                            <img src="https://design.sva.edu/wp-content/uploads/2018/08/Sagmeister.jpg"
-                                alt="Maksim Goffin" />
-                            <div class="peopl">
-                                <h3>Стефан Сагмайстер</h3>
-                                <p class="indentity">Графический дизайнер</p>
-                            </div>
-                        </figure>
-                    </div>
-                </div>
-            </div>
-            <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js'></script>
-            <script src='https://cdn.jsdelivr.net/jquery.slick/1.6.0/slick.min.js'></script>
-            <h1>Рейтинг курсов</h1>
-            <container>
-                <br />
-                <span onclick="gfg(1)" class="star">★
-                </span>
-                <span onclick="gfg(2)" class="star">★
-                </span>
-                <span onclick="gfg(3)" class="star">★
-                </span>
-                <span onclick="gfg(4)" class="star">★
-                </span>
-                <span onclick="gfg(5)" class="star">★
-                </span>
-            </container>
-            <container>
-                <h3>
-                    Rating is: 4.8/5
-                </h3>
-            </container>
-            <script src="function.js"></script>
-
-        </section>
-
-        <section>
-            <h1>Присоединяйся (Запись на курс)</h1>
-            <container>
-                <iframe
-                    src="https://docs.google.com/forms/d/e/1FAIpQLSfiTuu9zbyrMHhTlwCwR-nQYHza73mILoIVfwnkq0JAW5HW0Q/viewform?embedded=true"
-                    width="640" height="862" frameborder="0" marginheight="0" marginwidth="0">Загрузка…</iframe>
-            </container>
-        </section>
-
-    </main>
-
-    <footer>
-        <div>
-            © 2024 Онлайн школа
-        </div>
-    </footer>
-</body>
-
-</html>
+    // Сохраняем выбранную тему в localStorage
+    if (document.body.classList.contains('dark-theme')) {
+        localStorage.setItem('theme', 'dark');
+    } else {
+        localStorage.setItem('theme', 'light');
+    }
+});
