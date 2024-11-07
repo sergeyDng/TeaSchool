@@ -44,3 +44,34 @@ $(document).ready(function () {
         });
     }
 });
+
+// переключение темы
+const tema = document.getElementById('theme-toggle');
+
+// Проверяем, есть ли сохраненная тема в localStorage
+if (localStorage.getItem('theme') === 'dark') {
+    document.body.classList.add('dark-theme');
+    document.querySelector('header').classList.add('dark-theme');
+}
+
+// Обработчик события для кнопки переключения темы
+const themeToggleButton = document.getElementById('theme-toggle');
+
+// Проверяем, есть ли сохраненная тема в localStorage
+if (localStorage.getItem('theme') === 'dark') {
+    document.body.classList.add('dark-theme');
+    document.querySelector('header').classList.add('dark-theme');
+}
+
+// Обработчик события для кнопки переключения темы
+themeToggleButton.addEventListener('click', () => {
+    document.body.classList.toggle('dark-theme');
+    document.querySelector('header').classList.toggle('dark-theme');
+
+    // Сохраняем выбранную тему в localStorage
+    if (document.body.classList.contains('dark-theme')) {
+        localStorage.setItem('theme', 'dark');
+    } else {
+        localStorage.setItem('theme', 'light');
+    }
+});
