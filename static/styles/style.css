@@ -44,7 +44,8 @@ html {
 
 body {
     /*background-color: var(--header-color);*/
-    margin: 0%;
+    margin: 0;
+    padding: 0;
     background-image: var(--background-image);
     background-repeat: repeat;
     background-size: auto;
@@ -92,14 +93,16 @@ navbar * {
   color: var(--header-color);
 }
 
+navbar img {
+  width: 100px;
+}
+
 /* тут поидее картинка потом будет, поменяем*/
 .logo {
     display: flex;
     align-items: center;
     margin-inline: 30px;
 } 
-
-
 
 .btn {
     border: 3px solid transparent
@@ -140,7 +143,7 @@ navbar a {
 
 main {
     width: 80%;
-    margin-inline: auto;  /*отступы слева справа*/
+    margin-inline: 10%;  /*отступы слева справа*/
     align-items: center;
     background-color: var(--main-bg-color);
     /*box-shadow: 0px 0px 10px 3px var(--shadow-color);*/
@@ -152,6 +155,16 @@ section {
     border: 1px var(--main-bg-color-border);
     border-style: none solid solid;
     /* top | left and right | bottom */
+}
+
+section > info {
+  display: block;
+  height: 0;
+  transition: 500ms;
+}
+section:hover > info {
+  display: block;
+  height: auto;
 }
 
 .header {
@@ -179,20 +192,31 @@ container {
     perspective: 1000px;
     background-color: var(--triada-color);
     color: var(--main-bg-color);
-    border-radius: 15px;
+    border-radius: 8px; 
+    transition: 500ms;
+}
+.courses card:hover {
+  scale: 110%;
+  box-shadow: 0px 0px 50px 15px var(--shadow-color);
+}
+.courses card img {
+  max-width: 100%;
+  min-width: 100%;
+  width: 300px;
+  height: 300px;
+  position: relative;
+  margin: 15px;
+  border-radius: 8px;
 }
 
 footer {
     justify-content: space-evenly;
-    margin-left: -10px;
-    margin-right: -10px;
-    margin-bottom: -10px;
-    padding: 50px;
+    padding: 10%;
     color: var(--header-color);
     background-color: var(--contra-color);
 }
 
-/*переворачивающиеся карточка*/
+/*переворачивающиеся карточка у преподов*/
 .card {
     width: 300px;
     height: 300px;
