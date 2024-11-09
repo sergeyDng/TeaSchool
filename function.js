@@ -45,33 +45,35 @@ $(document).ready(function () {
     }
 });
 
-// переключение темы
-const tema = document.getElementById('theme-toggle');
+// themes
+const currentTheme = localStorage.getItem('theme') ? localStorage.getItem('theme') : null;
 
-// Проверяем, есть ли сохраненная тема в localStorage
-if (localStorage.getItem('theme') === 'dark') {
-    document.body.classList.add('dark-theme');
-    document.querySelector('header').classList.add('dark-theme');
-}
+if (currentTheme) {
+    document.documentElement.setAttribute('theme', currentTheme);
 
-// Обработчик события для кнопки переключения темы
-const themeToggleButton = document.getElementById('theme-toggle');
-
-// Проверяем, есть ли сохраненная тема в localStorage
-if (localStorage.getItem('theme') === 'dark') {
-    document.body.classList.add('dark-theme');
-    document.querySelector('header').classList.add('dark-theme');
-}
-
-// Обработчик события для кнопки переключения темы
-themeToggleButton.addEventListener('click', () => {
-    document.body.classList.toggle('dark-theme');
-    document.querySelector('header').classList.toggle('dark-theme');
-
-    // Сохраняем выбранную тему в localStorage
-    if (document.body.classList.contains('dark-theme')) {
-        localStorage.setItem('theme', 'dark');
-    } else {
-        localStorage.setItem('theme', 'light');
+    if (currentTheme === 'dark') {
+        toggleSwitch.checked = true;
     }
-});
+}
+
+const toggleSwitch = document.querySelector('.theme-switch input[type="checkbox"]');
+
+function switchTheme(e) {
+    if (e.target.checked) {
+        document.documentElement.setAttribute('theme', 'dark');
+    }
+    else {
+        document.documentElement.setAttribute('theme', 'light');
+    }    
+}
+
+toggleSwitch.addEventListener('change', switchTheme, false);
+
+if (e.target.checked) {
+    document.documentElement.setAttribute('theme', 'dark');
+    localStorage.setItem('theme', 'dark'); //this will be set to dark
+  }
+else {
+    document.documentElement.setAttribute('theme', 'light');
+    localStorage.setItem('theme', 'light'); //this will be set to light
+}

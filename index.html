@@ -20,17 +20,21 @@
 </head>
 
 <body>
-    <button id="theme-toggle">Переключить тему</button>
     <navbar>
         <div class="logo" href="#main">
-            <a href="/"><img src="static\images\logo_new.png" alt="LOGO" width=100px></a>
-           <a href="/"><h1>нечайная школа</h1></a>
+            <a href="#"><img src="static\images\logo_new.png" alt="LOGO" width=100px></a>
+            <a href="#"><h1>нечайная школа</h1></a>
         </div>
         <div class="logo">
-            <a href="#about">О нас</a>
-            <a href="#courses">Курсы</a>
-            <a href="#contacts">Контакты</a>
-            <a href="#teachers">Преподы</a>
+            <a>
+            <label class="theme-switch" for="checkbox">
+                <input type="checkbox" id="checkbox" /> 
+                <small>Темная тема</small>
+            </a>
+            <a href="#about" class="btn">О нас</a>
+            <a href="#courses" class="btn">Курсы</a>
+            <a href="#contacts" class="btn">Контакты</a>
+            <a href="#teachers" class="btn">Преподы</a>
         </div>
     </navbar>
     <main>
@@ -38,14 +42,12 @@
         <section id="about" class="header">
             <div>
                 <h1>А существует ли методы заваривания чая?</h1>
-                <p></p>
-                Преимущества наверное
             </div>
-            <p>
+            <info>
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem dolor hic veritatis similique? Itaque
                 asperiores error recusandae ex nulla cupiditate accusamus debitis quia? Eligendi, eveniet. Quae enim
                 quidem voluptas. Alias.
-            </p>
+            </info>
         </section>
 
         <section id="courses" class="courses">
@@ -164,7 +166,7 @@
             <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js'></script>
             <script src='https://cdn.jsdelivr.net/jquery.slick/1.6.0/slick.min.js'></script>
             <h1>Рейтинг курсов</h1>
-            <container>
+            <div style="text-align: center;">
                 <br />
                 <span onclick="gfg(1)" class="star">★
                 </span>
@@ -176,23 +178,26 @@
                 </span>
                 <span onclick="gfg(5)" class="star">★
                 </span>
-            </container>
-            <container>
+            </div>
+            <div style="text-align: center;">
                 <h3>
                     Rating is: 4.8/5
                 </h3>
-            </container>
+            </div>
             <script src="function.js"></script>
 
         </section>
-
         <section>
             <h1>Присоединяйся (Запись на курс)</h1>
-            <container>
+            <div style="text-align: center; width: 100%; max-width: 640px; margin: 0 auto;">
                 <iframe
                     src="https://docs.google.com/forms/d/e/1FAIpQLSfiTuu9zbyrMHhTlwCwR-nQYHza73mILoIVfwnkq0JAW5HW0Q/viewform?embedded=true"
-                    width="640" height="862" frameborder="0" marginheight="0" marginwidth="0">Загрузка…</iframe>
-            </container>
+                    style="width: 100%; height: 80vh; border: none;" 
+                    allowfullscreen>
+                    Загрузка…
+                </iframe>
+            </div>
+            
         </section>
 
     </main>
@@ -205,3 +210,6 @@
 </body>
 
 </html>
+
+
+
