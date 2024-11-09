@@ -14,7 +14,7 @@ $(document).ready(function () {
 	}]
 	});
 	// Код для системы рейтинга
-    let stars = document.getElementsByClassName("star");
+    let stars = document.getElementsByClassName("star_r");
     let output = document.getElementById("output");
 
     function gfg(n) {
@@ -26,14 +26,14 @@ $(document).ready(function () {
             else if (n == 3) cls = "three";
             else if (n == 4) cls = "four";
             else if (n == 5) cls = "five";
-            stars[i].className = "star " + cls;
+            stars[i].className = "star_r " + cls;
         }
         output.innerText = "Rating is: " + n + "/5";
     }
 
     function remove() {
         for (let i = 0; i < 5; i++) {
-            stars[i].className = "star";
+            stars[i].className = "star_r";
         }
     }
 
