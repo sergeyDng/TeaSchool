@@ -756,7 +756,7 @@ label
    /* margin: 0 auto; */
     background-color: #77b5fe;
     border-radius: 56px;
-    transform: translateY(-30%);
+    transform: translateY(-0%);
     cursor: pointer;
     transition: 0.3s ease background-color;
     overflow: hidden;
