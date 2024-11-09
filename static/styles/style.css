@@ -730,6 +730,16 @@ footer img {
 /* создание темной темы */
 /* Основные стили для светлой темы */
 
+/* Венки/награды */
+.award img {
+  transition: filter 0.5s ease;
+}
+
+.award img:hover {
+  filter: brightness(1.3) saturate(1.2);
+}
+
+
 header {
 background-color: lightgray;
 padding: 10px;
