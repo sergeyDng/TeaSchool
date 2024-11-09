@@ -731,14 +731,21 @@ footer img {
 /* Основные стили для светлой темы */
 
 /* Венки/награды */
+.award {
+  position: relative;
+  overflow: hidden; /* Скрываем выходящие за пределы элементы */
+}
+
 .award img {
-  transition: filter 0.5s ease;
+  max-height: 100%;
+  height: auto;
+  transition: filter 0.5s ease, transform 0.5s ease; /* Плавный переход для эффекта */
 }
 
 .award img:hover {
-  filter: brightness(1.3) saturate(1.2);
+  filter: brightness(1.3) saturate(1.2); /* Эффект при наведении */
+  transform: scale(0.95); /* Уменьшение изображения при наведении */
 }
-
 
 header {
 background-color: lightgray;
