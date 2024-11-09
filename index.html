@@ -16,7 +16,7 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
         rel="stylesheet">
-        <link rel="shortcut icon" href="icon.png" type="image/png">
+    <link rel="shortcut icon" href="icon.png" type="image/png">
 </head>
 
 <body>
@@ -27,12 +27,19 @@
                 <h1>нечайная школа</h1>
             </a>
         </div>
-        <div class="logo" id="right">
-            <a>
-            <label class="theme-switch" for="checkbox">
-                <input type="checkbox" id="checkbox" /> 
-                <small>Темная тема</small>
-            </a>
+        <a>
+        <div class="logo">
+            <div class="theme-switch">
+                <input type="checkbox" id="checkbox">
+                <label for="checkbox">
+                    <div id="star">
+                        <div class="star" id="star-1">★</div>
+                        <div class="star" id="star-2">★</div>
+                    </div>
+                    <div id="moon"></div>
+                </label>
+            </div>
+        </a>
             <a href="#about" class="btn">О нас</a>
             <a href="#courses" class="btn">Курсы</a>
             <a href="#contacts" class="btn">Контакты</a>
@@ -182,23 +189,40 @@
             <container>
                 <div class="card">
                     <div class="front"><img src="static/images/препод8.png" alt="Преподаватель чайной школы"></div>
-                    <div class="back info"><span><b><h3><center>Романов Владислав</center></h3></b><em> <b>- Умение делать чай - это суперсила:</b> Владислав знает, как сделать так, чтобы даже черный чай заиграл новыми красками!</em>
-                    </span></div>
+                    <div class="back info"><span><b>
+                                <h3>
+                                    <center>Романов Владислав</center>
+                                </h3>
+                            </b><em> <b>- Умение делать чай - это суперсила:</b> Владислав знает, как сделать так, чтобы
+                                даже черный чай заиграл новыми красками!</em>
+                        </span></div>
                 </div>
                 <div class="card">
                     <div class="front"><img src="static/images/препод6.png" alt="Преподаватель чайной школы"></div>
-                    <div class="back info"><span><b><h3><center>Дадарио Александра</center></h3></b><em><b>Тайна заваривания:</b> Александра, расскажет, как заваривать чай так, чтобы он стал произведением искусства. Кто знал, что для этого нужно больше навыков, чем для приготовления ужина?
-                    </em></span></div>
+                    <div class="back info"><span><b>
+                                <h3>
+                                    <center>Дадарио Александра</center>
+                                </h3>
+                            </b><em><b>Тайна заваривания:</b> Александра, расскажет, как заваривать чай так, чтобы он
+                                стал произведением искусства. Кто знал, что для этого нужно больше навыков, чем для
+                                приготовления ужина?
+                            </em></span></div>
                 </div>
                 <div class="card">
                     <div class="front"><img src="static/images/препод7.png" alt="Преподаватель чайной школы"></div>
-                    <div class="back info"><span><b><h3><center>Соколова Екатерина</center></h3></b><em><b>Чай как искусство:</b> Екатерина объяснит, почему некоторые сорта чая стоят целое состояние. И ты вдруг поймешь, что за 1000 рублей можно не только съездить на такси, но и «попробовать» кусочек счастья в чашке.
-                    </em></span></div>
+                    <div class="back info"><span><b>
+                                <h3>
+                                    <center>Соколова Екатерина</center>
+                                </h3>
+                            </b><em><b>Чай как искусство:</b> Екатерина объяснит, почему некоторые сорта чая стоят целое
+                                состояние. И ты вдруг поймешь, что за 1000 рублей можно не только съездить на такси, но
+                                и «попробовать» кусочек счастья в чашке.
+                            </em></span></div>
                 </div>
             </container>
         </section>
 
-        <section class="staticimage">
+        <section class="staticimage" id="rating">
             <h1>Лучшие в своем деле</h1>
             <div class="vospominan">
                 <div class="karusetulava">
@@ -273,15 +297,15 @@
             <h1>Рейтинг курсов</h1>
             <div style="text-align: center;">
                 <br />
-                <span onclick="gfg(1)" class="star">★
+                <span onclick="gfg(1)" class="star_r">★
                 </span>
-                <span onclick="gfg(2)" class="star">★
+                <span onclick="gfg(2)" class="star_r">★
                 </span>
-                <span onclick="gfg(3)" class="star">★
+                <span onclick="gfg(3)" class="star_r">★
                 </span>
-                <span onclick="gfg(4)" class="star">★
+                <span onclick="gfg(4)" class="star_r">★
                 </span>
-                <span onclick="gfg(5)" class="star">★
+                <span onclick="gfg(5)" class="star_r">★
                 </span>
             </div>
             <div style="text-align: center;">
@@ -297,12 +321,11 @@
             <div style="text-align: center; width: 100%; max-width: 640px; margin: 0 auto;">
                 <iframe
                     src="https://docs.google.com/forms/d/e/1FAIpQLSfiTuu9zbyrMHhTlwCwR-nQYHza73mILoIVfwnkq0JAW5HW0Q/viewform?embedded=true"
-                    style="width: 100%; height: 80vh; border: none;" 
-                    allowfullscreen>
+                    style="width: 100%; height: 80vh; border: none;" allowfullscreen>
                     Загрузка…
                 </iframe>
             </div>
-            
+
         </section>
 
     </main>
@@ -335,6 +358,3 @@
 </body>
 
 </html>
-
-
-
