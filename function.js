@@ -77,3 +77,5 @@ else {
     document.documentElement.setAttribute('theme', 'light');
     localStorage.setItem('theme', 'light'); //this will be set to light
 }
+
+/*нажатие на кнопку навигации*/
