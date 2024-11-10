@@ -146,7 +146,7 @@ width: 100px;
     text-align: left;
     top: 4.6rem;
     width: 100%;
-    background-color: var(--contra-color);
+    background-color: var(--contra-color-border);
     border: none;
   }
   #right.hidden{
