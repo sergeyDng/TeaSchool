@@ -45,6 +45,24 @@ $(document).ready(function () {
     }
 });
 
+//Кнопка навигации для телефона
+const navbutton = document.getElementById("navbutton");
+const navItems = document.querySelectorAll("#right");
+navbutton.addEventListener("click", (event) => {
+    const isOpen = navbutton.dataset.active === "true" ? true : false; 
+    if(isOpen){
+        navbutton.dataset.active = "false";
+        navItems.forEach(item => item.classList.add("hidden"));
+        navbutton.classList.remove("bi-x-lg");
+        navbutton.classList.add("bi-list");
+    } else{
+        navbutton.dataset.active = "true";
+        navItems.forEach(item => item.classList.remove("hidden"));
+        navbutton.classList.add("bi-x-lg");
+        navbutton.classList.remove("bi-list");
+    }
+});
+
 // themes
 const currentTheme = localStorage.getItem('theme') ? localStorage.getItem('theme') : null;
 
@@ -78,6 +96,4 @@ else {
     localStorage.setItem('theme', 'light'); //this will be set to light
 }
 
-//navbutton
-const navbutton = document.getElementById("navbutton");
-const navItems = document.querySelectorAll("");
+

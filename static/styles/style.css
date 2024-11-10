@@ -120,25 +120,23 @@ width: 100px;
   align-items: center;
   margin-inline: 30px;
 } 
-.logo#left {
+#left {
   margin-inline: 0;
   margin-left: 3vw;
 }
-.logo#right {
+#right {
+  display: flex;
   margin-inline: 0;
   margin-right: 3vw;
 }
-.logo#navbutton {
-  display: none;
-}
 #navbutton{
   border: none;
-  font-size: 280%;
+  font-size: 240%;
   background-color: var(--contra-color);
   display: none
 }
 @media only screen and (max-width: 1100px) {
-  .logo#right{
+  #right{
     display: flex;
     flex-direction: column;
     position: fixed;
@@ -148,17 +146,20 @@ width: 100px;
     background-color: var(--contra-color);
     border: none;
   }
+  #right.hidden{
+    display: none;
+    translate: -100vm;
+    opacity: 0;
+  }
   #navbutton{
     display: inline;
   }
 }
 @media only screen and (max-width: 480px) {
-  .logo #naming {
+  #naming {
     display: none;
   }
 }
-
-
 
 .btn {
   border: 3px solid transparent
@@ -262,7 +263,7 @@ section {
 }
 @media only screen and (max-width: 450px) {
   .texton div {
-    font-size: 2vmin;
+    font-size: 4vmin;
   }
 }
 
@@ -313,7 +314,7 @@ card.texton:hover div {
   width: 80%;
 }
 card > textinfo h1 {
-  font-size: 32px;
+  font-size: 30px;
 }
 
 /*картинки для различных курсов*/
