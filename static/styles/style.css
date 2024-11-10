@@ -11,6 +11,7 @@
   --body-text-color: black;
   --background-image: url("../images/wall.jpg");
   --info-text-color: #f1f2ff;
+  --blockquote-color: #ffffff;
 }
 :root[theme = "dark"] {
   --header-color: aliceblue;
@@ -23,7 +24,8 @@
   --triada-color: #5b3f5e;
   --triada-color-border: #221715;
   --body-text-color: rgb(228, 228, 228);
-  --background-image: url("../images/wall_dt.jpg")
+  --background-image: url("../images/wall_dt.jpg");
+  --blockquote-color: var(--triada-color-border);
 }
 
 h1 {
@@ -208,12 +210,43 @@ section > h1 {
   margin-block-start: 0;
   margin-block-end: 0;
   padding-block: 5%;
+  margin-bottom: 2vh;
   background-color: var(--main-bg-color);
   position: sticky;
   z-index: 1;
-  top: 12%; /*тут надо будет както чтобы относительно
+  top: 133px; /*тут надо будет както чтобы относительно
   навигации все норм было*/
   border-bottom: 0.1cm solid var(--main-bg-color-border);
+}
+@media only screen and (max-width: 1360px) {
+  section > h1 {
+    top: 120px;
+  }
+}
+@media only screen and (max-width: 1100px) {
+  section {
+    margin-inline: 5%;
+  }
+  section > h1 {
+    top: 80px;
+  }
+}
+@media only screen and (max-width: 760px) {
+  section {
+     padding-inline: 0;
+  }
+  section p {
+    padding: 5%;
+  }
+  section > h1 {
+    top: 75px;
+    padding-inline: 5%;
+  }
+}
+@media only screen and (max-width: 450px) {
+  section > h1 {
+    top: 68px;
+  }
 }
 
 .header {
@@ -282,23 +315,22 @@ section > h1 {
     height: 60vh;
   }
   .texton div {
-    font-size: 4.2vmin;
+    font-size: 3.8vmin;
   }
-}
-@media only screen and (max-width: 480px) {
-  .texton div {
-    font-size: 4.6vmin;
+  .texton h1 {
+    margin: 0;
+    padding-block: 0;
   }
 }
 @media only screen and (max-width: 435px) {
   .texton div {
-    font-size: 4.9vmin;
+    font-size: 4.4vmin;
   }
 }
 
 .texton:hover div {
   opacity: 1;
-  height: 25vh;
+  height: 30vh;
   padding-top: 5%;
 }
 
@@ -345,6 +377,7 @@ card.texton:hover div {
 }
 card > textinfo h1 {
   font-size: 30px;
+  padding: 0;
 }
 
 /*картинки для различных курсов*/
@@ -420,6 +453,9 @@ card > textinfo h1 {
   text-shadow: 0px 1px 6px var(--shadow-color),
               0px 0px 3px rgba(0, 0, 107, 1);
   text-align: center;
+  background-color: transparent;
+  position: relative;
+  border: 0;
 }
 
 .staticimage > div:not(.vospominan) {
@@ -437,6 +473,12 @@ container {
   grid-auto-flow: row;
   gap: 30px;
   justify-content: center;
+  padding: 5%;
+}
+@media only screen and (max-width: 760px) {
+  container {
+    padding: 10%;
+  }
 }
 
 .courses {
@@ -454,8 +496,8 @@ container {
   transition: 500ms;
 }
 .courses card:hover {
-scale: 110%;
-box-shadow: 0px 0px 50px 15px var(--shadow-color);
+scale: 108%;
+box-shadow: 0px 0px 15px 3px var(--shadow-color);
 }
 .courses card img {
 max-width: 100%;
@@ -591,7 +633,7 @@ footer img {
       margin: 40px 0 0 10px;
     }
     figure.testimonial blockquote {
-      background-color: #fff;
+      background-color: var(--blockquote-color);
       display: block;
       font-size: 16px;
       font-weight: 400;
@@ -622,7 +664,7 @@ footer img {
       height: 0;
       border-left: 0 solid transparent;
       border-right: 25px solid transparent;
-      border-top: 25px solid #fff;
+      border-top: 25px solid var(--blockquote-color);
       margin: 0;
       position: absolute;
     }
