@@ -14,7 +14,7 @@ $(document).ready(function () {
 	}]
 	});
 	// Код для системы рейтинга
-    let stars = document.getElementsByClassName("star");
+    let stars = document.getElementsByClassName("star_r");
     let output = document.getElementById("output");
 
     function gfg(n) {
@@ -26,14 +26,14 @@ $(document).ready(function () {
             else if (n == 3) cls = "three";
             else if (n == 4) cls = "four";
             else if (n == 5) cls = "five";
-            stars[i].className = "star " + cls;
+            stars[i].className = "star_r " + cls;
         }
         output.innerText = "Rating is: " + n + "/5";
     }
 
     function remove() {
         for (let i = 0; i < 5; i++) {
-            stars[i].className = "star";
+            stars[i].className = "star_r";
         }
     }
 
@@ -42,6 +42,24 @@ $(document).ready(function () {
         stars[i].addEventListener('click', function() {
             gfg(i + 1); // Передаем рейтинг от 1 до 5
         });
+    }
+});
+
+//Кнопка навигации для телефона
+const navbutton = document.getElementById("navbutton");
+const navItems = document.querySelectorAll("#right");
+navbutton.addEventListener("click", (event) => {
+    const isOpen = navbutton.dataset.active === "true" ? true : false; 
+    if(isOpen){
+        navbutton.dataset.active = "false";
+        navItems.forEach(item => item.classList.add("hidden"));
+        navbutton.classList.remove("bi-x-lg");
+        navbutton.classList.add("bi-list");
+    } else{
+        navbutton.dataset.active = "true";
+        navItems.forEach(item => item.classList.remove("hidden"));
+        navbutton.classList.add("bi-x-lg");
+        navbutton.classList.remove("bi-list");
     }
 });
 
@@ -78,4 +96,4 @@ else {
     localStorage.setItem('theme', 'light'); //this will be set to light
 }
 
-/*нажатие на кнопку навигации*/
+
