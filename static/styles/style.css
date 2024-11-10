@@ -328,9 +328,14 @@ section > h1 {
     padding-block: 0;
   }
 }
-@media only screen and (max-width: 435px) {
+@media only screen and (max-width: 480px) {
   .texton div {
     font-size: 4.4vmin;
+  }
+}
+@media only screen and (max-width: 450px) {
+  .texton div {
+    font-size: 4.6vmin;
   }
 }
 
