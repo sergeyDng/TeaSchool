@@ -16,83 +16,190 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
         rel="stylesheet">
-        <link rel="shortcut icon" href="изображения/иконка для вкладки.png" type="image/png">
+        <link rel="shortcut icon" href="icon.png" type="image/png">
 </head>
 
 <body>
-    <button id="theme-toggle">Переключить тему</button>
     <navbar>
-        <div class="logo" href="#main">
-            <a href="/"><img src="static\images\logo_new.png" alt="LOGO" width=100px></a>
-           <a href="/"><h1>нечайная школа</h1></a>
+        <div class="logo" id="left" href="#main">
+            <a href="#"><img src="static\images\logo_new.png" alt="LOGO" width=100px></a>
+            <a href="#" id="naming">
+                <h1>нечайная школа</h1>
+            </a>
         </div>
-        <div class="logo">
-            <a href="#about">О нас</a>
-            <a href="#courses">Курсы</a>
-            <a href="#contacts">Контакты</a>
-            <a href="#teachers">Преподы</a>
+        <div class="logo" id="right">
+            <a>
+            <label class="theme-switch" for="checkbox">
+                <input type="checkbox" id="checkbox" /> 
+                <small>Темная тема</small>
+            </a>
+            <a href="#about" class="btn">О нас</a>
+            <a href="#courses" class="btn">Курсы</a>
+            <a href="#contacts" class="btn">Контакты</a>
+            <a href="#teachers" class="btn">Преподы</a>
+        </div>
+        <div class="logo" id="navbutton">
+            <img src="static/images/navigation_button.png">
         </div>
     </navbar>
     <main>
 
-        <section id="about" class="header">
-            <div>
-                <h1>А существует ли методы заваривания чая?</h1>
-                <p></p>
-                Преимущества наверное
-            </div>
-            <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem dolor hic veritatis similique? Itaque
-                asperiores error recusandae ex nulla cupiditate accusamus debitis quia? Eligendi, eveniet. Quae enim
-                quidem voluptas. Alias.
-            </p>
+        <section id="about" class="texton header ">
+            <textinfo>
+                <h1>Незабываемый опыт</h1>
+                <div>Предлагаем вам погрузиться в мир 
+                    чайных традиций! Откройте для себя 
+                    удивительное разнообразие вкусов и 
+                    ароматов, узнайте секреты правильного 
+                    заваривания и сервировки, а также 
+                    познакомьтесь с историей и культурой 
+                    чаепития. Наши онлайн-курсы помогут 
+                    вам стать настоящим ценителем чая 
+                    и наслаждаться этим напитком по-новому.
+                </div>
+            </textinfo>
         </section>
 
         <section id="courses" class="courses">
             <h1>Курсы</h1>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti maxime quaerat nobis eos adipisci minus
-                sint ipsam enim quasi. Illum, dignissimos velit asperiores cupiditate reprehenderit odio temporibus
-                aspernatur blanditiis mollitia.</p>
+            <p>Онлайн-курсы чайной школы предлагают 
+                уникальную возможность погрузиться в мир чая,
+                 не выходя из дома. Выбирайте из широкого спектра
+                  направлений, от основ чайной культуры до
+                   тонкостей дегустации и приготовления редких
+                сортов. Опытные мастера раскрывают секреты чая, 
+                делятся знаниями о его истории, производстве и 
+                свойствах. Обучение доступно в удобное 
+                время и позволяет окунуться в чаепитие с 
+                комфортом и легкостью.</p>
             <container>
-                <card>
-                    <h2>Курс 1</h2>
+
+                <card class="texton" id="course1">
+                    <textinfo>
+                        <h1>Путь чайного мастера</h1>
+                        <div>
+                            Вводный курс для знакомства с основами чайной
+                             культуры: история чая, виды чайных растений, 
+                             способы выращивания, заваривания и дегустации.
+                        </div>
+                    </textinfo>
                 </card>
-                <card>
-                    <h2>Курс 2</h2>
+
+                <card class="texton" id="course2">
+                    <textinfo>
+                        <h1>Чайная церемония: Искусство наслаждения</h1>
+                        <div>
+                            Погружение в традиционные чайные церемонии 
+                            Китая и Японии, изучение этикета, ритуалов 
+                            и философии чаепития.
+                        </div>
+                    </textinfo>
                 </card>
-                <card>
-                    <h2>Курс 3</h2>
+
+                <card class="texton" id="course3">
+                    <textinfo>
+                        <h1>Путешествие в мир китайского чая</h1>
+                        <div>
+                            Изучение основных типов китайского чая: 
+                            зеленый, белый, черный, пуэр, улун. 
+                            Особенности производства, заваривания 
+                            и дегустации каждого сорта.
+                        </div>
+                    </textinfo>
                 </card>
-                <card>
-                    <h2>Курс 4</h2>
+
+                <card class="texton" id="course4">
+                    <textinfo>
+                        <h1>Чайная палитра: Дегустация и ароматы</h1>
+                        <div>
+                            Развитие сенсорных способностей через
+                             изучение ароматических профилей чаев, 
+                             методы дегустации и анализ вкусовых 
+                             характеристик.
+                        </div>
+                    </textinfo>
                 </card>
+
+                <card class="texton" id="course5">
+                    <textinfo>
+                        <h1>Искусство заваривания</h1>
+                        <div>
+                            Изучение различных методов заваривания 
+                            чая, подбор подходящих чашек и посуды. 
+                            Практические упражнения по завариванию 
+                            разных сортов чая.
+                        </div>
+                    </textinfo>
+                </card>
+
+                <card class="texton" id="course6">
+                    <textinfo>
+                        <h1>Создание авторских напитков</h1>
+                        <div>
+                            Изучение техник сочетания разных 
+                            сортов чая, добавок и специй для 
+                            создания собственных авторских напитков.
+                        </div>
+                    </textinfo>
+                </card>
+
+                <card class="texton" id="course7">
+                    <textinfo>
+                        <h1>Чай и еда: Сочетание вкусов</h1>
+                        <div>
+                            Изучение традиционных и современных сочетаний 
+                            чаев с блюдами разных кухонь мира. 
+                            Рекомендации по подбору чаев к 
+                            определенным продуктам.
+                        </div>
+                    </textinfo>
+                </card>
+
             </container>
         </section>
 
-        <section>
-            <h1> Преподы. Их плюсы. </h1>
+        <section id="teaching_staff" class="texton header">
+            <textinfo>
+                <h1>Сильный преподавательский состав</h1>
+                <div>
+                    Мастера с многолетним опытом и 
+                    глубоким знанием чайных традиций 
+                    делятся секретами приготовления, 
+                    раскрывают тонкости вкуса и аромата. 
+                    В их руках чай превращается в 
+                    искусство, а каждый урок — в 
+                    незабываемое путешествие в мир 
+                    чая. Они вдохновляют, обучают и 
+                    создают увлекательную атмосферу, 
+                    где чай становится не просто 
+                    напитком, а частью культуры.
+                </div>
+            </textinfo>
+        </section>
+
+        <section id ="teachers">
+            <h1> Наши преподаватели </h1>
             <container>
                 <div class="card">
-                    <div class="front"><img src="изображения/препод8.png" alt="Преподаватель чайной школы"></div>
+                    <div class="front"><img src="static/images/препод8.png" alt="Преподаватель чайной школы"></div>
                     <div class="back info"><span><b><h3><center>Романов Владислав</center></h3></b><em> <b>- Умение делать чай - это суперсила:</b> Владислав знает, как сделать так, чтобы даже черный чай заиграл новыми красками!</em>
                     </span></div>
                 </div>
                 <div class="card">
-                    <div class="front"><img src="изображения/препод6.png" alt="Преподаватель чайной школы"></div>
+                    <div class="front"><img src="static/images/препод6.png" alt="Преподаватель чайной школы"></div>
                     <div class="back info"><span><b><h3><center>Дадарио Александра</center></h3></b><em><b>Тайна заваривания:</b> Александра, расскажет, как заваривать чай так, чтобы он стал произведением искусства. Кто знал, что для этого нужно больше навыков, чем для приготовления ужина?
                     </em></span></div>
                 </div>
                 <div class="card">
-                    <div class="front"><img src="изображения/препод7.png" alt="Преподаватель чайной школы"></div>
+                    <div class="front"><img src="static/images/препод7.png" alt="Преподаватель чайной школы"></div>
                     <div class="back info"><span><b><h3><center>Соколова Екатерина</center></h3></b><em><b>Чай как искусство:</b> Екатерина объяснит, почему некоторые сорта чая стоят целое состояние. И ты вдруг поймешь, что за 1000 рублей можно не только съездить на такси, но и «попробовать» кусочек счастья в чашке.
                     </em></span></div>
                 </div>
             </container>
         </section>
 
-        <section>
-            <h1>Отзывы. Средняя оценка. Награды.</h1>
-
+        <section class="staticimage">
+            <h1>Лучшие в своем деле</h1>
             <div class="vospominan">
                 <div class="karusetulava">
                     <div>
@@ -163,8 +270,10 @@
             </div>
             <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js'></script>
             <script src='https://cdn.jsdelivr.net/jquery.slick/1.6.0/slick.min.js'></script>
+        </section>
+        <section>
             <h1>Рейтинг курсов</h1>
-            <container>
+            <div style="text-align: center;">
                 <br />
                 <span onclick="gfg(1)" class="star">★
                 </span>
@@ -176,23 +285,39 @@
                 </span>
                 <span onclick="gfg(5)" class="star">★
                 </span>
-            </container>
-            <container>
+            </div>
+            <div style="text-align: center;">
                 <h3>
                     Rating is: 4.8/5
                 </h3>
+            </div>
+            <container>
+                <div class="award">
+                    <img src="static/images/award1.png" alt="Award">
+                </div>
+                <div class="award">
+                    <img src="static/images/award2.png" alt="Award">
+                </div>
+                <div class="award">
+                    <img src="static/images/award3.png" alt="Award">
+                </div>
             </container>
+            
+            
             <script src="function.js"></script>
 
         </section>
-
         <section>
-            <h1>Присоединяйся (Запись на курс)</h1>
-            <container>
+            <h1>Присоединяйся!</h1>
+            <div style="text-align: center; width: 100%; max-width: 640px; margin: 0 auto;">
                 <iframe
                     src="https://docs.google.com/forms/d/e/1FAIpQLSfiTuu9zbyrMHhTlwCwR-nQYHza73mILoIVfwnkq0JAW5HW0Q/viewform?embedded=true"
-                    width="640" height="862" frameborder="0" marginheight="0" marginwidth="0">Загрузка…</iframe>
-            </container>
+                    style="width: 100%; height: 80vh; border: none;" 
+                    allowfullscreen>
+                    Загрузка…
+                </iframe>
+            </div>
+            
         </section>
 
     </main>
@@ -201,7 +326,27 @@
         <div>
             © 2024 Онлайн школа
         </div>
-    </footer>
+        <!-- Примерное расположение кнопок вк и тг-->
+        <div>
+
+            <a href="#" style="text-decoration: none;">
+                <img src="static/images/tg.png" alt="Telegram">
+            </a>
+
+            <a href="#" style="text-decoration: none;">
+                <img src="static/images/vk.png" alt="VK">
+            </a>
+        </div>
+
+        <ul>
+            <li><a href="#about">О нас</a></li>
+            <li><a href="#courses">Курсы</a></li>
+            <li><a href="#contacts">Контакты</a></li>
+            <li><a href="#teachers">Преподаватели</a></li>
+            <li><a href="#signup">Запись на курс</a></li>
+        </ul>
+
+    </footer> 
 </body>
 
 </html>
