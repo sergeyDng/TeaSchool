@@ -146,7 +146,7 @@ width: 100px;
     text-align: left;
     top: 4.6rem;
     width: 100%;
-    background-color: var(--contra-color);
+    background-color: var(--contra-color-border);
     border: none;
   }
   #right.hidden{
@@ -155,7 +155,22 @@ width: 100px;
     opacity: 0;
   }
   navbar #right a {
-    margin-block: 2vh;
+    width: 50%;
+    padding-block: 2vh;
+    padding-inline: auto;
+    border: 0;
+    border-top: 1px solid var(--contra-color);
+    text-align: center;
+  }
+  navbar #right a.themebtn {
+    border: 0;
+    width: auto
+  }
+  navbar #right:last-child {
+    border-bottom: 1px solid var(--contra-color);;
+  }
+  navbar #right a:hover {
+    box-shadow: none;
   }
   #navbutton{
     display: inline;
@@ -322,6 +337,9 @@ section > h1 {
   }
   .texton div {
     font-size: 3.8vmin;
+    opacity: 1;
+    height: 30vh;
+    padding-top: 5%;
   }
   .texton h1 {
     margin: 0;
@@ -821,33 +839,6 @@ footer img {
     }
     .slick-next:before {
       content: "";
-    }
-
-
-    .star_r {                      /*звездочки рейтинг */
-      font-size: 7vw;
-      cursor: pointer;
-      color: rgb(255, 255, 255);
-    }
-     
-    .one {
-      color: rgb(255, 0, 0);
-    }
-     
-    .two {
-      color: rgb(255, 106, 0);
-    }
-     
-    .three {
-      color: rgb(251, 255, 120);
-    }
-     
-    .four {
-      color: rgb(255, 255, 0);
-    }
-     
-    .five {
-      color: rgb(24, 159, 14);
     }
 
 /* создание темной темы */
