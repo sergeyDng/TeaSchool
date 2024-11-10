@@ -456,6 +456,7 @@ card > textinfo h1 {
   background-color: transparent;
   position: relative;
   border: 0;
+  top: 0;
 }
 
 .staticimage > div:not(.vospominan) {
@@ -673,7 +674,7 @@ footer img {
       border-style: none;
       border-left: 0 solid transparent;
       border-right: 25px solid transparent;
-      border-top: 25px solid #fff;
+      border-top: 25px solid var(--blockquote-color);
       border-color: none;
       box-shadow: none;
     }
@@ -881,8 +882,8 @@ label
     width: 116px;
     height: 56px;
    /* margin: 0 auto; */
-    background-color: #77b5fe;
-    border-radius: 56px;
+    background-color: #90c4ff;
+    border-radius: 40px;
     transform: translateY(-0%);
     cursor: pointer;
     transition: 0.3s ease background-color;
