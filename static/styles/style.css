@@ -155,7 +155,22 @@ width: 100px;
     opacity: 0;
   }
   navbar #right a {
-    margin-block: 2vh;
+    width: 50%;
+    padding-block: 2vh;
+    padding-inline: auto;
+    border: 0;
+    border-top: 1px solid var(--contra-color);
+    text-align: center;
+  }
+  navbar #right a.themebtn {
+    border: 0;
+    width: auto
+  }
+  navbar #right:last-child {
+    border-bottom: 1px solid var(--contra-color);;
+  }
+  navbar #right a:hover {
+    box-shadow: none;
   }
   #navbutton{
     display: inline;
