@@ -159,20 +159,31 @@ navbar a {
 }
 
 main {
-  width: 100vw;
+  width: 100%;
   align-items: center;
   /*background-color: var(--main-bg-color);*/
   /*box-shadow: 0px 0px 10px 3px var(--shadow-color);*/
 }
 
 section {
-  padding: 5%;
+  padding: 5%; 
   margin-inline: 10%;
   scroll-margin-block: 5rem;
   border: 1px var(--main-bg-color-border);
   border-style: none solid solid;
   background-color: var(--main-bg-color);
   /* top | left and right | bottom */
+}
+section > h1 {
+  margin-block-start: 0;
+  margin-block-end: 0;
+  padding-block: 5%;
+  background-color: var(--main-bg-color);
+  position: sticky;
+  z-index: 1;
+  top: 12%; /*тут надо будет както чтобы относительно
+  навигации все норм было*/
+  border-bottom: 0.1cm solid var(--main-bg-color-border);
 }
 
 .header {
@@ -190,7 +201,7 @@ section {
   background-size: cover;
   background-position: center;
   height: 50vh;
-  width: 100vw;
+  width: 100%;
   
   /*переписываем стиль обычного section*/
   margin-inline: 0;
@@ -501,7 +512,6 @@ footer img {
       margin-right: auto;
       padding-block: 7%;
       padding-inline: 4%;
-      border-bottom: 0.1cm solid var(--info-text-color);
       border-top: 0.1cm solid var(--info-text-color);
     }
     .indentity {
@@ -512,7 +522,7 @@ footer img {
       float: left;
       overflow: hidden;
       margin: 10px 1%;
-      padding: 0 20px;
+      padding: 0 2vw;
       height: 60%;
       text-align: left;
       box-shadow: none !important;
@@ -538,7 +548,7 @@ footer img {
       font-weight: 400;
       line-height: 1.5em;
       margin: 0;
-      padding: 25px 50px 30px;
+      padding: 4vh 1vw 4vh;
       position: relative;
     }
     figure.testimonial blockquote:before, figure.testimonial blockquote:after {
@@ -567,6 +577,16 @@ footer img {
       margin: 0;
       position: absolute;
     }
+     /*исправление наведения*/
+    figure.testimonial .btn:hover {
+      border-style: none;
+      border-left: 0 solid transparent;
+      border-right: 25px solid transparent;
+      border-top: 25px solid #fff;
+      border-color: none;
+      box-shadow: none;
+    }
+
     figure.testimonial .peopl {
       position: absolute;
       bottom: 45px;
