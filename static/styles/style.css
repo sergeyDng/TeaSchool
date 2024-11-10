@@ -64,7 +64,7 @@ body {
 
 navbar {
   position: sticky; /*навигация сверху всегда*/
-  top: 0px;
+  top: -1px;
   z-index: 10;
 
   display: flex;
@@ -108,7 +108,7 @@ color: var(--header-color);
 navbar img {
 width: 100px;
 }
-@media only screen and (max-width: 992px){
+@media only screen and (max-width: 1100px){
   navbar img{
     width: 60px;
   }
@@ -132,6 +132,7 @@ width: 100px;
 #navbutton{
   border: none;
   font-size: 240%;
+  margin-inline: 7vw;
   background-color: var(--contra-color);
   display: none
 }
@@ -150,6 +151,9 @@ width: 100px;
     display: none;
     translate: -100vm;
     opacity: 0;
+  }
+  navbar #right a {
+    margin-block: 2vh;
   }
   #navbutton{
     display: inline;
@@ -224,6 +228,10 @@ section {
 
   position: relative;
   transition: background-color 0.5s ease-in-out;
+
+  border: 0;
+  border-top: var(--main-bg-color-border);
+  border-bottom: var(--main-bg-color-border);
 }
 
 #teaching_staff {
@@ -248,8 +256,13 @@ section {
   text-align: justify;
 }
 @media only screen and (max-width: 800px) {
+  .texton {
+    min-height: 500px;
+    height: 54vh;
+  }
   .texton div {
-    font-size: 3.3vmin;
+    font-size: 3.5vmin;
+    margin-inline: 5%;
   }
 }
 @media only screen and (max-width: 560px) {
@@ -258,12 +271,17 @@ section {
     height: 60vh;
   }
   .texton div {
-    font-size: 4vmin;
+    font-size: 4.2vmin;
   }
 }
-@media only screen and (max-width: 450px) {
+@media only screen and (max-width: 480px) {
   .texton div {
-    font-size: 4vmin;
+    font-size: 4.6vmin;
+  }
+}
+@media only screen and (max-width: 435px) {
+  .texton div {
+    font-size: 4.9vmin;
   }
 }
 
@@ -282,8 +300,9 @@ textinfo h1 {
   text-shadow: 0px 3px 10px var(--shadow-color),
                0px 0px 3px rgba(0, 0, 107, 1);
   text-align: center;
+  padding: 5vw;
 }
-@media only screen and (max-width: 540px) {
+@media only screen and (max-width: 570px) {
   textinfo h1 {
     font-size: 8vw;
   }
@@ -375,6 +394,10 @@ card > textinfo h1 {
   /*переписываем стиль обычного section*/
   margin-inline: 0;
   padding: 0;
+
+  border: 0;
+  border-top: var(--main-bg-color-border);
+  border-bottom: var(--main-bg-color-border);
 }
 
 
