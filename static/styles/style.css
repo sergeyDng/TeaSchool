@@ -886,7 +886,7 @@ label
    /* margin: 0 auto; */
     background-color: #90c4ff;
     border-radius: 40px;
-    transform: translateY(-0%);
+    transform: translateY(-0%) scale(0.7);
     cursor: pointer;
     transition: 0.3s ease background-color;
     overflow: hidden;
