@@ -299,6 +299,12 @@ section > h1 {
                0px 0px 3px rgba(0, 0, 107, 1);
   text-align: justify;
 }
+@media only screen and (max-width: 1100px) {
+  .texton div {
+    font-size: 2.8vmin;
+    margin-inline: 5%;
+  }
+}
 @media only screen and (max-width: 800px) {
   .texton {
     min-height: 500px;
