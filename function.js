@@ -78,4 +78,6 @@ else {
     localStorage.setItem('theme', 'light'); //this will be set to light
 }
 
-/*нажатие на кнопку навигации*/
+//navbutton
+const navbutton = document.getElementById("navbutton");
+const navItems = document.querySelectorAll("");
